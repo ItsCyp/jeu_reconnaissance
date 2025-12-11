@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -21,10 +22,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 0 20px 40px;
+    padding: 0 20px 0;
 }
 
-/* Barre de navigation des modes - sticky */
 .mode-selection {
     position: sticky;
     top: 0;
@@ -50,8 +50,8 @@ body {
     margin-bottom: 25px;
     padding: 20px 30px;
     background: #fff;
-    border-left: 4px solid #1a1a1a;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
 }
 
 .selector-group {
@@ -136,7 +136,7 @@ button.active {
     align-items: stretch;
     background: #1a1a1a;
     padding: 0;
-    border-radius: 0;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -146,7 +146,7 @@ button.active {
 }
 
 #stats-container #round-container {
-    background: #2d2d2d;
+    background: #1a1a1a;
 }
 
 .separator {
@@ -156,10 +156,9 @@ button.active {
 #btn-rejouer {
     background: #1a1a1a;
     color: white;
-    border: none;
+    border-radius: 30px;
     margin-top: 10px;
     padding: 15px 40px;
-    border-radius: 0;
     position: relative;
     overflow: hidden;
 }
@@ -172,11 +171,11 @@ button.active {
 }
 
 #btn-rejouer:hover {
-    background: #333;
+    background: #444;
 }
 
 #btn-rejouer:hover::after {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 #cards-container {
@@ -186,12 +185,15 @@ button.active {
     padding: 30px;
     background: #fff;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    margin-bottom: 40px;
 }
 
 #cards-container.game-grid-3x3 {
     grid-template-columns: repeat(3, 1fr);
     max-width: 650px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .card {
@@ -204,10 +206,11 @@ button.active {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 15px;
 }
 
 .card:hover {
-    background: #f0f0f0;
+    background: #f1f1f1;
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -263,15 +266,15 @@ button.active {
 }
 
 .card.correct {
-    background: #e8f5e9;
+    background: #a5d6a7;
 }
 
 .card.wrong {
-    background: #ffebee;
+    background: #ef9a9a;
 }
 
 .card.bounce {
-    animation: bounce 0.3s;
+    animation: bounce 0.2s;
 }
 
 .card.shake {
@@ -279,7 +282,7 @@ button.active {
 }
 
 .card.pulse {
-    animation: pulse 0.3s ease-in-out;
+    animation: pulse 0.4s ease-in-out;
 }
 
 .hide-names .card p {
@@ -306,7 +309,7 @@ button.active {
 footer {
     text-align: center;
     font-size: 0.8rem;
-    padding: 30px 20px;
+    padding: 20px 10px;
     background: #fff;
     color: #888;
     width: 100%;
@@ -338,7 +341,7 @@ footer p {
 
 @media (max-width: 600px) {
     body { padding: 0; }
-    .container { padding: 0 15px 30px; }
+    .container { padding: 0 15px 0; }
     .mode-selection { 
         flex-direction: row;
         flex-wrap: nowrap;

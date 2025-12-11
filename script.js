@@ -1,4 +1,5 @@
 const vocabulary = [
+    // Animaux
     { name: "Chat", image: "images/animaux/chat.png", category: "animaux", translations: { fr: "Chat", en: "Cat", es: "Gato", ja: "Neko (ネコ)", ko: "Goyangi (고양이)", it: "Gatto", ru: "Кот" } },
     { name: "Chien", image: "images/animaux/chien.png", category: "animaux", translations: { fr: "Chien", en: "Dog", es: "Perro", ja: "Inu (イヌ)", ko: "Gae (개)", it: "Cane", ru: "Собака" } },
     { name: "Oiseau", image: "images/animaux/oiseau.png", category: "animaux", translations: { fr: "Oiseau", en: "Bird", es: "Pájaro", ja: "Tori (トリ)", ko: "Sae (새)", it: "Uccello", ru: "Птица" } },
@@ -24,6 +25,8 @@ const vocabulary = [
     { name: "Singe", image: "images/animaux/singe.png", category: "animaux", translations: { fr: "Singe", en: "Monkey", es: "Mono", ja: "Saru (サル)", ko: "Wonsungi (원숭이)", it: "Scimmia", ru: "Обезьяна" } },
     { name: "Vache", image: "images/animaux/vache.png", category: "animaux", translations: { fr: "Vache", en: "Cow", es: "Vaca", ja: "Ushi (ウシ)", ko: "So (소)", it: "Mucca", ru: "Корова" } },
     { name: "Souris", image: "images/animaux/souris.png", category: "animaux", translations: { fr: "Souris", en: "Mouse", es: "Ratón", ja: "Nezumi (ネズミ)", ko: "Jwi (쥐)", it: "Topo", ru: "Мышь" } },
+    
+    // Couleurs
     { name: "Rouge", color: "#e74c3c", category: "couleurs", translations: { fr: "Rouge", en: "Red", es: "Rojo", ja: "Aka (アカ)", ko: "Ppalgansaek (빨간색)", it: "Rosso", ru: "Красный" } },
     { name: "Bleu", color: "#3498db", category: "couleurs", translations: { fr: "Bleu", en: "Blue", es: "Azul", ja: "Ao (アオ)", ko: "Paransaek (파란색)", it: "Blu", ru: "Синий" } },
     { name: "Vert", color: "#2ecc71", category: "couleurs", translations: { fr: "Vert", en: "Green", es: "Verde", ja: "Midori (ミドリ)", ko: "Chokrok (초록)", it: "Verde", ru: "Зелёный" } },
@@ -80,13 +83,13 @@ const SPEECH_LANG_CODES = {
 };
 
 const UI_TEXTS = {
-    fr: { click: "Clique sur une carte pour entendre le nom !", find: "Trouve : ", find_speak: "Trouve ", good: "Bonne réponse !", bad: "Mauvaise réponse !", win: "Bravo ! Tu as gagné !", lose: "Partie terminée !", score: "Score final", restart: "Recommencer" },
-    en: { click: "Click on a card to hear the name!", find: "Find: ", find_speak: "Find the ", good: "Good answer!", bad: "Wrong answer!", win: "Congrats! You won!", lose: "Game over!", score: "Final score", restart: "Restart" },
-    es: { click: "¡Haz clic en una carta para escuchar el nombre!", find: "Encuentra: ", find_speak: "Encuentra ", good: "¡Buena respuesta!", bad: "¡Respuesta incorrecta!", win: "¡Bravo! ¡Ganaste!", lose: "¡Juego terminado!", score: "Puntaje final", restart: "Reiniciar" },
-    ja: { click: "カードをクリックして名前を聞こう！", find: "探して：", find_speak: "を探して", good: "正解！", bad: "不正解！", win: "おめでとう！勝ちました！", lose: "ゲームオーバー！", score: "最終スコア", restart: "リスタート" },
-    ko: { click: "카드를 클릭하여 이름을 들어보세요!", find: "찾으세요: ", find_speak: "를 찾으세요 ", good: "정답입니다!", bad: "오답입니다!", win: "축하합니다! 이겼습니다!", lose: "게임 종료!", score: "최종 점수", restart: "다시 시작" },
-    it: { click: "Clicca su una carta per sentire il nome!", find: "Trova: ", find_speak: "Trova ", good: "Risposta corretta!", bad: "Risposta sbagliata!", win: "Bravo! Hai vinto!", lose: "Partita finita!", score: "Punteggio finale", restart: "Ricomincia" },
-    ru: { click: "Нажмите на карту, чтобы услышать название!", find: "Найди: ", find_speak: "Найди ", good: "Правильно!", bad: "Неправильно!", win: "Поздравляем! Вы выиграли!", lose: "Игра окончена!", score: "Финальный счет", restart: "Начать заново" }
+    fr: { click: "Clique sur une carte pour entendre le nom !", find: "Trouve : ", find_speak: "Trouve ", good: "Bonne réponse !", bad: "Mauvaise réponse !", win: "Bravo ! ", lose: "Partie terminée !", score: "Score final", restart: "Recommencer" },
+    en: { click: "Click on a card to hear the name!", find: "Find: ", find_speak: "Find the ", good: "Good answer!", bad: "Wrong!", win: "Congrats!", lose: "Game over!", score: "Final score", restart: "Restart" },
+    es: { click: "¡Haz clic en una carta para escuchar el nombre!", find: "Encuentra: ", find_speak: "Encuentra ", good: "¡Buena respuesta!", bad: "¡Respuesta incorrecta!", win: "¡Bravo!", lose: "¡Juego terminado!", score: "Puntaje final", restart: "Reiniciar" },
+    ja: { click: "カードをクリックして名前を聞こう！", find: "探して：", find_speak: "を探して", good: "正解！", bad: "不正解！", win: "おめでとう！", lose: "ゲームオーバー！", score: "最終スコア", restart: "リスタート" },
+    ko: { click: "카드를 클릭하여 이름을 들어보세요!", find: "찾으세요: ", find_speak: "를 찾으세요 ", good: "정답입니다!", bad: "오답입니다!", win: "축하합니다!", lose: "게임 종료!", score: "최종 점수", restart: "다시 시작" },
+    it: { click: "Clicca su una carta per sentire il nome!", find: "Trova: ", find_speak: "Trova ", good: "Risposta corretta!", bad: "Risposta sbagliata!", win: "Bravo!", lose: "Partita finita!", score: "Punteggio finale", restart: "Ricomincia" },
+    ru: { click: "Нажмите на карту, чтобы услышать название!", find: "Найди: ", find_speak: "Найди ", good: "Правильно!", bad: "Неправильно!", win: "Поздравляем!", lose: "Игра окончена!", score: "Финальный счет", restart: "Начать заново" }
 };
 
 function init() {
@@ -265,12 +268,12 @@ function endGame() {
     cardsContainer.style.pointerEvents = 'none';
     
     let message = "";
-    if (score >= WINNING_SCORE) {
-        message = UI_TEXTS[currentLang].win;
+    if (score >= 6) {
+        message = `${UI_TEXTS[currentLang].win} ${score}/${MAX_ROUNDS}`;
         instructionText.textContent = message;
         confettiEffect();
     } else {
-        message = `${UI_TEXTS[currentLang].lose} ${UI_TEXTS[currentLang].score} : ${score}/${MAX_ROUNDS}.`;
+        message = `${UI_TEXTS[currentLang].lose} ${score}/${MAX_ROUNDS}`;
         instructionText.textContent = message;
     }
     
@@ -317,7 +320,7 @@ function handleCardClick(item, cardElement) {
                 correctCard.classList.add('correct');
             }
 
-            instructionText.textContent = `${UI_TEXTS[currentLang].bad} ${UI_TEXTS[currentLang].find} ${targetAnimal.translations[currentLang]}`;
+            instructionText.textContent = `${UI_TEXTS[currentLang].bad}`;
             
             isGameActive = false;
             setTimeout(() => {
@@ -390,6 +393,59 @@ function resetCards() {
 }
 
 function confettiEffect() {
+    const colors = ['#ff6b6b', '#4ecdc4', '#ffe66d', '#95e1d3', '#f38181', '#aa96da', '#fcbad3', '#a8d8ea', '#ffd93d', '#6bcb77'];
+    const confettiCount = 100;
+    
+    for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement('div');
+        const size = Math.random() * 10 + 6;
+        const duration = Math.random() * 2 + 2;
+        const delay = Math.random() * 0.8;
+        const startX = Math.random() * 100;
+        const drift = (Math.random() - 0.5) * 200;
+        
+        confetti.style.cssText = `
+            position: fixed;
+            width: ${size}px;
+            height: ${size}px;
+            background: ${colors[Math.floor(Math.random() * colors.length)]};
+            left: ${startX}vw;
+            top: -20px;
+            border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 1;
+        `;
+        document.body.appendChild(confetti);
+        
+        const startTime = performance.now() + delay * 1000;
+        const endY = window.innerHeight + 50;
+        
+        function animate(currentTime) {
+            const elapsed = currentTime - startTime;
+            if (elapsed < 0) {
+                requestAnimationFrame(animate);
+                return;
+            }
+            
+            const progress = Math.min(elapsed / (duration * 1000), 1);
+            const y = progress * endY;
+            const x = drift * progress + Math.sin(progress * 10) * 30;
+            const rotation = progress * 720;
+            const opacity = 1 - progress * 0.5;
+            
+            confetti.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${rotation}deg)`;
+            confetti.style.opacity = opacity;
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                confetti.remove();
+            }
+        }
+        
+        requestAnimationFrame(animate);
+    }
 }
 
 init();
